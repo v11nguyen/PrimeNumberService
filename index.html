@@ -2,18 +2,38 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Request JSON Test</title>
+<title>Prime Number Service</title>
 </head>
 <body>
-	<a href="#" id="get-data">Make service call.</a>
+<img src="curt.png" />
+<br />
+<br />
+<br />
+<form>
+This application will generate the <strong>first set of prime numbers</strong> as you specify below.
+<br />
+<br />
+How many prime number would you like?<br/>
+<input type="text" id="prime-count" size="5"/>
+</form>
+<br />
+	<button id="get-data">Show Prime Numbers</button>
 	<div id="show-data"></div>
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script>
+	
 	$(document).ready(function () {
 		  $('#get-data').click(function () {
 		    var showData = $('#show-data');
 
-		    $.getJSON('/PrimeNumberService/PrimeNumberService.php?count=10', function (data) {
+			var primeCount = $('#prime-count').val();
+			if(primeCount == ''){
+				alert("Please enter a number.")
+			}else if(primeCount > 2000){
+				alert("Seriously? This may take a while.");
+			}
+		    
+		    $.getJSON('PrimeNumberService.php?count=' + primeCount, function (data) {
 		      console.log(data);
 
 		      var items = data.prime.map(function (item) {
@@ -29,9 +49,10 @@
 		      }
 		    });
 
-		    showData.text('Loading the JSON file.');
+		    showData.text('Waiting...');
 		  });
 		});
+	
 	</script>
 </body>
 </html>
