@@ -1,10 +1,14 @@
 This is a simple web service running on PHP, using NginX.
 
-The service is writtent to return the first set of prime numbers starting from 2 based on the count specified in the service call.
+The service is written to return the first set of prime numbers starting from 2 based on the count specified in the service call.
 The following call will return the first 1000 prime numbers.
 
+Web service end point.
 http://45.55.79.143/PrimeNumberService/PrimeNumberService.php?count=1000
 
 The web service returns JSON data that can be consumed using front end codes.
 
 In this example, JQuery is used on the front end to make a simple call to the web service. The web service return the data, which can be parsed and display on the web page.
+
+Fron end web application.
+http://45.55.79.143/PrimeNumberService/
