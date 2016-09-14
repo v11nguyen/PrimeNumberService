@@ -13,5 +13,5 @@ The web service returns JSON data that can be consumed using front end codes.
 
 In this example, JQuery is used on the front end to make a simple call to the web service. The web service return the data, which can be parsed and display on the web page.
 
-Fron end web application.
+Front end web application.
 http://45.55.79.143/PrimeNumberService/
