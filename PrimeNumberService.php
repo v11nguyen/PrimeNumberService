@@ -11,7 +11,7 @@ $number = 2;
 //$primeFrom = $_GET['from'];
 //$primeTo   = $_GET['to'];
 $numberOfPrimeExpected = $_GET['count'];
-echo "{\"Prime\":[";
+echo "{\"prime\":[";
 while ( $count < $numberOfPrimeExpected ) {
 	$divisionCount = 0;
 	for($i = 1; $i <= $number; $i ++) {
